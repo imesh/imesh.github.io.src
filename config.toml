@@ -1,4 +1,18 @@
 title = "imesh.io"
 baseurl = "http://imesh.github.io/"
-languageCode = "en-us"
+
 contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+builddrafts = false
+canonifyurls = true
+languageCode = "en-us"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "Open Source | Middleware | Cloud | Life"
+  author = "Imesh Gunaratne"
+
