@@ -24,15 +24,15 @@ Now with Mono XSP2 we have a complete software stack for running .NET Applicatio
 
 How to install Mono XSP2 on Ubuntu:
 
-[code] sudo apt-get install mono-xsp2 mono-xsp2-base [/code]
+```` sudo apt-get install mono-xsp2 mono-xsp2-base ````
 
 Install Sample Web Applications:
 
-[code] sudo apt-get install asp.net2-examples [/code]
+```` sudo apt-get install asp.net2-examples ````
 
 Run The Web Server:
 
-[code] xsp2 --root /usr/share/asp.net2-demos/ [/code]
+```` xsp2 --root /usr/share/asp.net2-demos/ ````
 
 Listening on address: 0.0.0.0
 

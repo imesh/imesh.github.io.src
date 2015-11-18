@@ -26,7 +26,7 @@ To create a new VM image from a running VM instance we first need to install cli
 Execute the below command to install nova-client, glance-client and swift on an Ubuntu host. If its a different operating system please refer [OpenStack documentation](http://docs.openstack.org/user-guide/content/install_clients.html) for details.
 
 
-[code] sudo apt-get install python-novaclient python-glanceclient swift [/code]
+```` sudo apt-get install python-novaclient python-glanceclient swift ````
 
 
 
@@ -38,7 +38,7 @@ Execute the below command to install nova-client, glance-client and swift on an 
 Next execute the below command to list the running instances.
 
 
-[code] nova list [/code]
+```` nova list ````
 
 
 
@@ -50,7 +50,7 @@ Next execute the below command to list the running instances.
 Select the instance that needs to be exported as an image and execute the below command.
 
 
-[code] nova create-image <image-id> <new-image-name> [/code]
+```` nova create-image <image-id> <new-image-name> ````
 
 
 
@@ -62,7 +62,7 @@ Select the instance that needs to be exported as an image and execute the below 
 Execute the below command to download the created image as a file.
 
 
-[code] glance image-download <image-id> --file <file-name>.img [/code]
+```` glance image-download <image-id> --file <file-name>.img ````
 
 
 
@@ -74,7 +74,7 @@ Execute the below command to download the created image as a file.
 Now if you want to upload an existing image file to an OpenStack instance execute the below command.
 
 
-[code] glance image-create --name="image-name" --is-public=false --container-format=ami --disk-format=ami < file-name.img [/code]
+```` glance image-create --name="image-name" --is-public=false --container-format=ami --disk-format=ami < file-name.img ````
 
 **Notes:**
 OpenStack Grizzly release has following components: Object Store (Swift), Image Store (Glance), Compute (Nova), Dashboard (Horizon), Identity (Keystone), Network (Quantum) and Block Storage (Cinder).

@@ -44,7 +44,7 @@ org.apache.synapse.mediators.eip.splitter.IterateMediator (Synapse 2.1.2-wso2v5)
       msgNumber + EIPConstants.MESSAGE_SEQUENCE_DELEMITER + msgCount);
       ...
    }
-[/code]
+````
 
 - Then I have configured the endpoint timeout settings to trigger the fault sequence if a timeout occurs.
 - Here we need to consider the timeout value of the actual backend service which the endpoint is pointing to.
@@ -82,7 +82,7 @@ org.apache.synapse.mediators.eip.aggregator.Aggregate (Synapse 2.1.2-wso2v5):
       }
       ...
    }
-[/code]
+````
 
 - To do this we should not define a timeout in complete condition in aggregate mediator, rather the following could be defined:
 
@@ -96,6 +96,6 @@ org.apache.synapse.mediators.eip.aggregator.Aggregate (Synapse 2.1.2-wso2v5):
     </onComplete> 
 </aggregate> 
 </code>
-[/code]
+````
 
 - Once the aggregated response message is reached at the Response Sequence it will be sent back to the client.

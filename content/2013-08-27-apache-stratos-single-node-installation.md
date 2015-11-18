@@ -47,7 +47,7 @@ Apache Stratos is an enterprise grade Platform as a Service (PaaS) solution for 
 10. Download Apache Stratos binary packages from the website or build them from source.
 
 **How to build from source:**
-[code]
+````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
 cd incubator-stratos
 mvn clean install
@@ -55,7 +55,7 @@ cp stratos/products/cloud-controller/modules/distribution/target/apache-stratos-
 cp stratos/products/stratos-controller/modules/distribution/target/apache-stratos-sc-.zip
 cp stratos/products/elb/modules/distribution/target/apache-stratos-elb-.zip
 cp incubator-stratos/products/stratos-agent/distribution/target/apache-stratos-agent-.zip
-[/code]
+````
 
 11. Create a new MySQL database user for stratos.
 12. Copy Stratos Installer from incubator-stratos/tools/stratos-installer to a desired path.
@@ -91,9 +91,9 @@ It is recommended to start the servers on the following order; MB, CC, SC, ELB a
 ### Removal
 
 
-[code]
+````
 sudo ./clean.sh -a mysql-username -b mysql-password
-[/code]
+````
 
 This script will drop all Stratos databases created, remove any logs available and remove CC, SC, ELB and Agent content. You may run this script on your own risk.
 

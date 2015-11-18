@@ -53,7 +53,7 @@ Mock IaaS service simulates the lifecycle of an instance using a thread. Each in
 
 Health statistics generator updates the health statistics map according to the statistics patterns defined in the Mock IaaS configuration. The following sample Mock IaaS configuration illustrates how these patterns could be defined for different cartridges:
 
-[code]
+````
 <mock-iaas enabled="true">
    <health-statistics>
        <cartridge type="tomcat">
@@ -78,7 +78,7 @@ Health statistics generator updates the health statistics map according to the s
        </cartridge>
    </health-statistics>
 </mock-iaas>
-[/code]
+````
 
 
 In the above sample we have defined a health statistics generation pattern for tomcat cartridge. Similarly we can define multiple health statistics generation patterns for different cartridges. Under each cartridge its possible to define three different autoscaling factors: memory-consumption|load-average|request-in-flight. Mock health statistics generator will generate statistics for each factor for the given cartridge and update the central health statistics map. In each pattern mode attribute defines the action that needs to be taken once the last sample value is reached. If this is set to loop, mock health statistics generator will loop back to the first value. If it is set to continue the last sample value will be continued. If it is set to stop, health statistics generation process will be stopped and eventually health statistics publishing process will also stop. Finally the members in that cluster will become faulty.

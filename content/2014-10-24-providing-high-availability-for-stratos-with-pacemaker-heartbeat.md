@@ -62,7 +62,7 @@ Heartbeat is a daemon that provides messaging infrastructure for Pacemaker. It m
 
 
 
-[code]sudo su[/code]
+````sudo su````
 
 
 	
@@ -70,7 +70,7 @@ Heartbeat is a daemon that provides messaging infrastructure for Pacemaker. It m
 
 
 
-[code]apt-get install pacemaker heartbeat[/code]
+````apt-get install pacemaker heartbeat````
 
 
 	
@@ -78,7 +78,7 @@ Heartbeat is a daemon that provides messaging infrastructure for Pacemaker. It m
 
 
 
-[code]
+````
 # enable pacemaker, without stonith
 crm yes
 # define log file
@@ -97,7 +97,7 @@ node node2 # set node2 hostname
 # heartbeats, over dedicated replication interface
 ucast eth1 10.186.175.16 # set node1 network-interface and ip address
 ucast eth1 54.211.110.217 # set node2 network-interface and ip address
-[/code]
+````
 
 
 	
@@ -105,13 +105,13 @@ ucast eth1 54.211.110.217 # set node2 network-interface and ip address
 
 
 
-[code]
+````
 ( echo -ne "auth 1\n1 sha1 "; \
 dd if=/dev/urandom bs=512 count=1 | openssl md5 ) \
 > /etc/ha.d/authkeys
 
 chmod 0600 /etc/ha.d/authkeys
-[/code]
+````
 
 
 	
@@ -124,9 +124,9 @@ chmod 0600 /etc/ha.d/authkeys
 
 
 
-[code]
+````
 service heartbeat restart
-[/code]
+````
 
 
 	
@@ -134,7 +134,7 @@ service heartbeat restart
 
 
 
-[code]
+````
 crm status
 
 ============
@@ -148,7 +148,7 @@ Version: 1.1.6-9971ebba4494012a93c03b40a2c58ec0eb60f50c
 ============
 
 Online: [ ip-10-186-175-16 ip-10-153-165-178 ]
-[/code]
+````
 
 
 	
@@ -156,9 +156,9 @@ Online: [ ip-10-186-175-16 ip-10-153-165-178 ]
 
 
 
-[code]
+````
 crm configure property stonith-enabled=false
-[/code]
+````
 
 
 	
@@ -166,9 +166,9 @@ crm configure property stonith-enabled=false
 
 
 
-[code]
+````
 crm configure primitive FAILOVER-IP ocf:heartbeat:IPaddr params ip=192.168.10.20 cidr_netmask="255.255.255.0" op monitor interval=10s
-[/code]
+````
 
 
 	
@@ -181,7 +181,7 @@ crm configure primitive FAILOVER-IP ocf:heartbeat:IPaddr params ip=192.168.10.20
 
 
 
-[code]
+````
 https://gist.github.com/imesh/5256272cd71b74a06581
 
 #!/bin/sh
@@ -319,7 +319,7 @@ restart|reload|force-reload)
    exit 1
 esac
 exit $?
-[/code]
+````
 
 
 	
@@ -327,9 +327,9 @@ exit $?
 
 
 
-[code]
+````
 crm configure primitive STRATOS lsb::stratos op monitor interval=15s
-[/code]
+````
 
 
 	
@@ -337,9 +337,9 @@ crm configure primitive STRATOS lsb::stratos op monitor interval=15s
 
 
 
-[code]
+````
 crm configure group FAILOVER-IP-RESOURCE-GROUP FAILOVER-IP STRATOS
-[/code]
+````
 
 
 	
@@ -347,7 +347,7 @@ crm configure group FAILOVER-IP-RESOURCE-GROUP FAILOVER-IP STRATOS
 
 
 
-[code]
+````
 crm configure colocation FAILOVER-IP-RESOURCE-GROUP-COLOCATION inf: FAILOVER-IP STRATOS
-[/code]
+````
 

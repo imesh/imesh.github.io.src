@@ -18,21 +18,21 @@ WSO2 Identity server 4.5.0 does not provide REST APIs for accessing its administ
 1. Download WSO2 ESB 4.8.1 and IS 4.5.0.
 
 2. Extract ESB distribution and set the offset to 1 in carbon.xml file.
-[code] <offset>1</offset> [/code]
+```` <offset>1</offset> ````
 
 3. Extract IS distribution and set the HideAdminServiceWSDLs property to false in carbon.xml file. This will expose administrative services WSDLs.
 
-[code] <HideAdminServiceWSDLs>false</HideAdminServiceWSDLs> [/code]
+```` <HideAdminServiceWSDLs>false</HideAdminServiceWSDLs> ````
 
 4. Now start IS with OSGi console enabled:
 
-[code] sh <IS-HOME>/bin/wso2server.sh -DosgiConsole [/code]
+```` sh <IS-HOME>/bin/wso2server.sh -DosgiConsole ````
 
 5. Enter listAdminServices command in OSGi console and retrieve the list of administrative services available and their WSDLs.
 
 6. In this article I will use listAllUsers() method available in UserAdmin service to demonstrate how to convert SOAP based services to REST. UserAdmin service WSDL could be found at:
 
-[code] https://localhost:9443/services/UserAdmin?wsdl [/code]
+```` https://localhost:9443/services/UserAdmin?wsdl ````
 
 7. Now create an in sequence in ESB with the following content:
 
@@ -61,7 +61,7 @@ WSO2 Identity server 4.5.0 does not provide REST APIs for accessing its administ
         </endpoint>
     </send>
 </sequence>
-[/code]
+````
 
 8. Create an out sequence with the following content:
 
@@ -71,7 +71,7 @@ WSO2 Identity server 4.5.0 does not provide REST APIs for accessing its administ
     <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
     <send/>
 </sequence>
-[/code]
+````
 
 9. Create an API with the following content:
 
@@ -81,21 +81,21 @@ WSO2 Identity server 4.5.0 does not provide REST APIs for accessing its administ
         <faultSequence/>
     </resource>
 </api>
-[/code]
+````
 
 10. Send a HTTP GET request to the listUsers API:
 
 Request:
-[code]
+````
 curl -v http://localhost:8281/listUsers?filter=*&limit=10
-[/code]
+````
 
 Response:
-[code]
+````
 {"listAllUsersResponse":
    {"return":[ {"@type":"ax2629:FlaggedName","dn":{"@nil":"true"},"domainName":{"@nil":"true"},"editable":true,
 "itemDisplayName":"admin","itemName":"admin","readOnly":false,"roleType":{"@nil":"true"},"selected":false,"shared":false},
                        {"@type":"ax2629:FlaggedName","dn":{"@nil":"true"},"domainName":{"@nil":"true"},"editable":false,
 "itemDisplayName":null,"itemName":false,"readOnly":false,"roleType":{"@nil":"true"},"selected":false,"shared":false}
 ]}}
-[/code]
+````

@@ -21,7 +21,7 @@ Apache Stratos (incubating) is now ready with it’s initial release. A new Git 
 
 
 You could follow the below steps to build the binary distribution from source:
-[code]
+````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
 
 git checkout 3.0.0-incubation-x
@@ -29,11 +29,11 @@ git checkout 3.0.0-incubation-x
 cd incubator-stratos
 
 mvn clean install
-[/code]
+````
 
 This process will checkout the source files from 3.0.0-incubating-x branch and build using maven. Once the build is completed you could find the binary packages at the following locations:
 
-[code]
+````
 incubator-stratos/products/stratos-cli/distribution/target/apache-stratos-cli-3.0.0-incubating-x.zip
 
 incubator-stratos/products/cloud-controller/modules/distribution/target/apache-stratos-cc-3.0.0-incubating-x.zip
@@ -43,7 +43,7 @@ incubator-stratos/products/stratos-controller/modules/distribution/target/apache
 incubator-stratos/products/elb/modules/distribution/target/apache-stratos-elb-3.0.0-incubating-x.zip
 
 incubator-stratos/products/stratos-agent/distribution/target/apache-stratos-agent-3.0.0-incubating-x.zip
-[/code]
+````
  
 
 
@@ -53,9 +53,9 @@ incubator-stratos/products/stratos-agent/distribution/target/apache-stratos-agen
 
 Please find the official binary packages at the blow location. Select the latest RC version and download the files.
 
-[code]
+````
 https://dist.apache.org/repos/dist/dev/incubator/stratos/
-[/code]
+````
  
 
 
@@ -66,13 +66,13 @@ https://dist.apache.org/repos/dist/dev/incubator/stratos/
 
 Once the binary distribution is in place we need to prepare Stratos cartridge images according to the preferred Infrastructure as a Service (IaaS) platform. Here I have created Apache Tomcat, PHP and MySQL cartridge images for Openstack. You could download those image files from the following URLs:
 
-[code]
+````
 stratos-3.0.0-incubating-tomcat-cartridge.img.zip
 
 stratos-3.0.0-incubating-php-cartridge.img.zip
 
 stratos-3.0.0-incubating-mysql-cartridge.img.zip
-[/code]
+````
  
 
 
@@ -104,23 +104,23 @@ glance image-create --name="stratos-3.0.0-incubating-php-cartridge" --is-public=
 
 
 1. Now take a copy of the Stratos installer from it’s source repository’s tools folder:
-[code]
+````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
 
 git checkout 3.0.0-incubation-x
 
 cd incubator-stratos/tools/stratos-installer
-[/code]
+````
 
 This folder contains scripts for installing Apache Stratos on a given environment. First configure the required settings in setup.conf file found under conf directory:
 
-[code]
+````
 vi conf/setup.conf
-[/code]
+````
 
 2. Configure general information section with the below parameter values:
 
-[code]
+````
 export setup_path= #Folder path containing stratos_setup
 export stratos_pack_path= #Folder path containing stratos packages 
 export stratos_path= #Folder which stratos will be installed
@@ -128,11 +128,11 @@ export JAVA_HOME= #Java home path
 export hostip="" #Machine ip on which setup script run
 export host_user="" #A host user account for stratos.
 export mysql_connector_jar=$stratos_pack_path/"mysql-connector-java-5.1.25.jar" #mysql connector jar file name
-[/code]
+````
 
 3. Configure Openstack section with following parameter values. One important thing to note here is that openstack_provider_enabled property enables Openstack IaaS in Stratos. Therefore in this specific scenario you may need to set ec2_provider_enabled property to false.
 
-[code]
+````
 # Openstack
 export openstack_provider_enabled=true
 export openstack_identity="stratos:stratos" #Openstack project name:Openstack login user
@@ -149,18 +149,18 @@ export openstack_security_groups="security-groups"
 export openstack_php_cartridge_image_id="" #Openstack PHP Cartridge Image ID
 export openstack_mysql_cartridge_image_id="" #Openstack MySQL Cartridge Image ID
 export openstack_tomcat_cartridge_image_id="" #Openstack Apache Tomcat Cartridge Image ID
-[/code]
+````
 
 4. Install following pre-requisite software:
 
-[code]
+````
 java -jdk1.6.x   
 Git
 facter   
 zip
 mysql-server
 Gitblits
-[/code]
+````
     
 5. Download WSO2 Message Broker (MB) binary distribution from http://wso2.com/products/message-broker/ and copy it to stratos-pack-path. Here you could use any preferred message broker product which supports AMQP.
 
@@ -168,14 +168,14 @@ Gitblits
 
 7. Add the following entries to the /etc/hosts file:
 
-[code]
+````
 <ip-address> stratos.apache.org        # stratos domain
 <ip-address> mb.stratos.apache.org     # message broker hostname
 <ip-address> cc.stratos.apache.org     # cloud controller hostname
 <ip-address> sc.stratos.apache.org     # stratos controller hostname
 <ip-address> elb.stratos.apache.org    # elastic load balancer hostname
 <ip-address> agent.stratos.apache.org  # agent hostname
-[/code]
+````
 
 
 
@@ -184,19 +184,19 @@ Gitblits
 
 
 1. Once the above configuration is done, execute the below command to install Stratos at the given path (stratos_path):
-[code]
+````
 sudo ./setup.sh -p "elb sc cc agent"
-[/code]
+````
 
 2. At the end of the installation it will prompt to start all the servers in the background, you could say no to this question and start the server manually so that you have more control over the initial Stratos environment. More importantly if any configuration errors has occurred, you should be able to rectify them more easily.
-[code]
+````
 sh $stratos_path/<module>/bin/stratos.sh 
-[/code]
+````
 
 3. Now carefully watch the logs of Elastic Load Balancer (ELB), Stratos Controller (SC), Cloud Controller (CC) and Stratos Agent. Those logs could be found at the following location of each module. Each should have started successfully without any problems.
-[code]
+````
 $stratos_path/<module>/repository/logs/wso2carbon.log
-[/code]
+````
  
 
 
@@ -207,6 +207,6 @@ $stratos_path/<module>/repository/logs/wso2carbon.log
 
 1. Now login to Stratos Controller using admin/admin and create a tenant user at the below URL:
 
-[code]https://sc.stratos.apache.org:9445/carbon[/code]
+````https://sc.stratos.apache.org:9445/carbon````
 
 2. Login again to Stratos Controller using the tenant user and subscribe to a cartridge. Here you might need to use a Git repository to point to an application to be deployed on Stratos PaaS. This process should spin up a new instance of relevant cartridge and update the status on cartridge subscription list. Once the cartridge is ready you could test the deployed application by using its URL.

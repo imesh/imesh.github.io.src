@@ -30,7 +30,7 @@ The below sample code demonstrates how to talk to the JMX endpoint of the ESB an
 
 
 
-[code]
+````
 import javax.management.MBeanServerConnection;
 import javax.management.ObjectName;
 import javax.management.remote.JMXConnector;
@@ -61,7 +61,7 @@ public class Main {
         }
     }
 }
-[/code]
+````
 
 [1] https://docs.wso2.com/display/ESB481/Message+Processors
 [2] https://docs.wso2.com/display/ESB481/Store+and+Forward+Using+JMS+Message+Stores

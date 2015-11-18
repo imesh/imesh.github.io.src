@@ -21,20 +21,20 @@ Following steps could be tried out to test this functionality with WSO2 Applicat
 
 1. Download AS 5.2.0 binary distribution and extract to a desired location.
 2. Set the following property to false in repository/conf/carbon.xml
-[code] <hideadminservicewsdls>false</hideadminservicewsdls> [/code]
+```` <hideadminservicewsdls>false</hideadminservicewsdls> ````
 
 This will expose the Administrative Services WSDLs and we may need to access the following services:
-[code]
+````
 1. https://host-name:9443/services/AuthenticationAdmin?wsdl
 2. https://host-name:9443/services/ApplicationAdmin?wsdl
-[/code]
+````
 
 3. Invoke the login() method at https://host-name:9443/services/AuthenticationAdmin service. This method will return a Session ID on the HTTP response header and it may look like below:
 JSESSIONID=45A850DF90CA6A009AD875CF5EF61460
 
 4. Invoke listAllApplications() method at https://host-name:9443/services/ApplicationAdmin service while passing the Session ID on the HTTP request header as an Cookie. This request may look like below:
 
-[code]
+````
 – Request –
 POST https://host-name:9443/services/ApplicationAdmin.ApplicationAdminHttpsSoap11Endpoint/ HTTP/1.1
 Accept-Encoding: gzip,deflate
@@ -56,13 +56,13 @@ User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
       </ns:listAllApplicationsResponse>
    </soapenv:Body>
 </soapenv:Envelope>
-[/code]
+````
 
 On the response body you could see the available CApps listed.
 
 5. Now invoke getAppData() method at https://host-name:9443/services/ApplicationAdmin service with the required CApp name and Session ID:
 
-[code]
+````
 – Request –
 POST https://host-name:9443/services/ApplicationAdmin.ApplicationAdminHttpsSoap11Endpoint/ HTTP/1.1
 Accept-Encoding: gzip,deflate
@@ -91,6 +91,6 @@ User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
       </ns:getAppDataResponse>
    </soapenv:Body>
 </soapenv:Envelope>
-[/code]
+````
 
 Here on the response body you could see the deployment status of the CApps and their artifacts.

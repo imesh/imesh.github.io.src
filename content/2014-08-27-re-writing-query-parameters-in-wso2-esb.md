@@ -14,7 +14,7 @@ tags:
 
 The following code sample shows how to re-write a query parameter in an URL in WSO2 ESB. This technique might be useful when dynamically handling endpoint URLs.
 
-[code]
+````
 <property name="URL" value="http://host:8280?p1=abc&amp;p2=qwe"/>
 <filter source="$ctx:URL" regex=".*format=.*">
     <then>
@@ -32,4 +32,4 @@ The following code sample shows how to re-write a query parameter in an URL in W
     <property name="-- original --" expression="$ctx:URL"/>
     <property name="-- updated --" expression="$ctx:URL_UPDATED"/>
 </log>
-[/code]
+````
