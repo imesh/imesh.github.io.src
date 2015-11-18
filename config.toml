@@ -1,0 +1,4 @@
+title = "imesh.io"
+baseurl = "http://imesh.github.io/"
+languageCode = "en-us"
+contentdir = "content"
