@@ -12,23 +12,12 @@ categories:
 
 ## What is a Message Processor?
 
-
-
-
 WSO2 ESB provides message processors for delivering messages that have been temporarily stored in a message store. This approach is useful for serving traffic to back-end services that can only accept messages at a given rate, whereas incoming traffic to the ESB arrives at different rates [1]. Please refer [2] for sample use cases of message processors.
-
-
-
 
 
 ## How to Implement a MBeans Client?
 
-
-
-
 The below sample code demonstrates how to talk to the JMX endpoint of the ESB and actiavate and deactivate a message processor. Here update the JMX URL and the bean definition accordingly.
-
-
 
 ````
 import javax.management.MBeanServerConnection;

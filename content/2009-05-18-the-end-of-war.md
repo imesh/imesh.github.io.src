@@ -10,6 +10,6 @@ categories:
 - Blog
 ---
 
-![](http://rootfolder.info/images/sl_lion.jpg)
+![](http://imesh.io/images/sl_lion.jpg)
 
 It's a historical day for all the Sri Lankans!! The war which did a great harm to the country nearly for thirty years came to an end. Let us all show our greatest gratitude to all the War Heroes who sacrificed their lives to make this a success.

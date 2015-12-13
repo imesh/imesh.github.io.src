@@ -18,21 +18,18 @@ Apache Stratos 4.0.0 [installation process](https://cwiki.apache.org/confluence/
 As a solution to this, I implemented a script to automate the complete Stratos installation process by filling the gaps in between:
 
 
-
 #### Prerequisites:
-
 
 ```` An Ubuntu 12.04 64bit host ````
 
 
-
 #### Steps to follow:
-
 
 1. Take a git clone of the below git repository:
 ```` git clone https://github.com/imesh/stratos-dev-stack.git ````
 
 2. Update install.sh with host private IP and IaaS configuration parameters:
+
 ````
 host_private_ip=""
 ec2_identity="identity"
@@ -44,15 +41,24 @@ ec2_security_groups="security-groups"
 ````
 
 3. Grant install.sh executable access:
-```` chmod +x install.sh ````
+
+````
+chmod +x install.sh
+````
 
 4. Run install.sh with root permissions:
-```` sudo ./install.sh ````
+
+````
+sudo ./install.sh
+````
 
 This will download and install Stratos source/binary packages, Java, MySQL connector, ActiveMQ, puppet master and configure all of them with default configuration settings. Once the process is complete it will start MySQL server, Active MQ and Stratos.
 
 Stratos dashboard URL could be found at the below link:
-```` https://<hostname>:9443/console ````
+
+````
+https://<hostname>:9443/console
+````
 
 In addition to Stratos installation we need to create a base cartridge image. This will act as the base image for all the cartridges. To start with spawn another instance of Ubuntu 12.04 64bit image and run the below script with root permissions. In this process we do not need to do any configurations, it will download and install all prerequisites and puppet agent:
 

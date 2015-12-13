@@ -13,7 +13,7 @@ tags:
 - stratos
 ---
 
-![](http://rootfolder.info/a/1/images/ApacheStratos/stratos-single-node-architecture.png)
+![](http://imesh.io/a/1/images/ApacheStratos/stratos-single-node-architecture.png)
 
 [Based on Apache Stratos (incubating) 4.0.0-M5]
 
@@ -21,7 +21,6 @@ Apache Stratos is an enterprise grade Platform as a Service (PaaS) solution for 
 
 
 ### Prerequisites
-
 
 1. An IaaS supported by jclouds API.
 2. A Linux server distribution. Ubuntu Server 13.04 x64 is recommended.
@@ -34,7 +33,6 @@ Apache Stratos is an enterprise grade Platform as a Service (PaaS) solution for 
 
 ### Pre-Installation
 
-
 1. Install the preferred Linux server distribution on the selected host.
 2. Install Java runtime, MySQL Server and Unzip utility.
 3. Connect the host to a network where the IaaS is accessible. Make sure that a VM instance in the IaaS could access the Stratos host.
@@ -46,7 +44,9 @@ Apache Stratos is an enterprise grade Platform as a Service (PaaS) solution for 
 9. Download WSO2 Message Broker (MB) binary distribution from http://wso2.com and copy it to .
 10. Download Apache Stratos binary packages from the website or build them from source.
 
+
 **How to build from source:**
+
 ````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
 cd incubator-stratos
@@ -61,9 +61,7 @@ cp incubator-stratos/products/stratos-agent/distribution/target/apache-stratos-a
 12. Copy Stratos Installer from incubator-stratos/tools/stratos-installer to a desired path.
 
 
-
 ### Installation
-
 
 1. Extract WSO2 Message Broker (MB) on the installation path and set it’s port offset value in repository/conf/carbon.xml to 5. Once this is set message broker listening port will be 5677.
 2. Update stratos-installer/conf/setup.conf and define all configuration parameters. This is one of the crucial steps of the installation. The configuration has divided into following sections; General, Message Broker, Cloud Controller, Stratos Controller, Elastic Load Balancer, Stratos Agent and IaaS. All these sections should be precisely configured.
@@ -74,10 +72,7 @@ This script will extract stratos packages to the given installation path, create
 It is recommended to start the servers on the following order; MB, CC, SC, ELB and finally the Agent. Wait until each product is started successfully to start the next. Once all servers are started, make sure that none of the server logs have errors on them. If you could see any errors, you may need to first correct them before proceeding further.
 
 
-
 ### Post Installation (Verification)
-
-
 
 1. Find the URL of the stratos controller from it’s log and open it on a web browser. The default URL would be https://{host-name}:9445/carbon and administrator user credentials are admin/admin.
 2. Login to the stratos controller and create a new tenant.
@@ -87,9 +82,7 @@ It is recommended to start the servers on the following order; MB, CC, SC, ELB a
 6. Now the applications deployed via the git repository should be available in the cloud to be accessed by a client.
 
 
-
 ### Removal
-
 
 ````
 sudo ./clean.sh -a mysql-username -b mysql-password

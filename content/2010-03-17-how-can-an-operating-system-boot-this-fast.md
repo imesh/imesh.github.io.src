@@ -12,12 +12,6 @@ categories:
 
 Did you know how [Chromium Operating System](http://dev.chromium.org/chromium-os) boot so fast? Today I was watching [this](http://www.youtube.com/watch?v=mTFfl7AjNfI) You Tube video on "Chromium OS Fast Boot" and found the below diagram. See the difference between the traditional Operating System Boot Tasks and Chromium Tasks. It has get rid of more than half of the tasks to make it so fast.
 
-
-
-
-![](http://rootfolder.info/images/chromium/chromium-os-boot.PNG)
-
-
-
+![](http://imesh.io/images/chromium/chromium-os-boot.PNG)
 
 Image Source: [http://www.youtube.com/watch?v=mTFfl7AjNfI](http://www.youtube.com/watch?v=mTFfl7AjNfI)

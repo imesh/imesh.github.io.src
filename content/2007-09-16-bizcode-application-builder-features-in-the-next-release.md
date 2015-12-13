@@ -16,12 +16,12 @@ _1. Defining Primary Keys in Class Designer Diagram_
 
 Visual Studio Class Designer still does not support Primary Key definitions. Therefore the developers will always have to define Primary Keys before generating source code based on the Class Diagram. This new feature was designed to define Primary Key attributes of a given class in their Remarks section. The BizCode Application Builder will identify them at the time the model is read to generate source code.
 
-![](http://rootfolder.info/images/BizCodeApplicationBuilderFeaturesInNextRelease/PrimaryKeyRemark.jpg)
+![](http://imesh.io/images/BizCodeApplicationBuilderFeaturesInNextRelease/PrimaryKeyRemark.jpg)
 
-![](http://rootfolder.info/images/BizCodeApplicationBuilderFeaturesInNextRelease/PrimaryKeyRemarkSource.jpg)
+![](http://imesh.io/images/BizCodeApplicationBuilderFeaturesInNextRelease/PrimaryKeyRemarkSource.jpg)
 
 _2. User Preferences_
 
 The preferences section will allow the users to define their own settings to customize the generated source code.
 
-![](http://rootfolder.info/images/BizCodeApplicationBuilderFeaturesInNextRelease/Preferences.jpg)
+![](http://imesh.io/images/BizCodeApplicationBuilderFeaturesInNextRelease/Preferences.jpg)

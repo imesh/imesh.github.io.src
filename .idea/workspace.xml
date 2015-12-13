@@ -3,23 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c055cdc1-90f8-4bdf-bfef-8635be33c91d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public" afterPath="$PROJECT_DIR$/public" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2010-03-15-running-asp-net-applications-on-linux-using-mono.md" afterPath="$PROJECT_DIR$/content/2010-03-15-running-asp-net-applications-on-linux-using-mono.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2013-08-19-creating-openstack-images.md" afterPath="$PROJECT_DIR$/content/2013-08-19-creating-openstack-images.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2013-08-27-apache-stratos-single-node-installation.md" afterPath="$PROJECT_DIR$/content/2013-08-27-apache-stratos-single-node-installation.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2013-09-16-wso2-capp-deployment-verification-process-2.md" afterPath="$PROJECT_DIR$/content/2013-09-16-wso2-capp-deployment-verification-process-2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2013-09-27-getting-started-with-apache-stratos-incubating-initial-release-with-openstack.md" afterPath="$PROJECT_DIR$/content/2013-09-27-getting-started-with-apache-stratos-incubating-initial-release-with-openstack.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-04-22-a-quick-guide-for-generating-a-pgp-key.md" afterPath="$PROJECT_DIR$/content/2014-04-22-a-quick-guide-for-generating-a-pgp-key.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-05-15-exposing-wso2-identity-server-admin-services-as-rest-apis.md" afterPath="$PROJECT_DIR$/content/2014-05-15-exposing-wso2-identity-server-admin-services-as-rest-apis.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-06-15-implementing-split-aggregate-pattern-in-esb.md" afterPath="$PROJECT_DIR$/content/2014-06-15-implementing-split-aggregate-pattern-in-esb.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-06-22-install-stratos-in-one-go.md" afterPath="$PROJECT_DIR$/content/2014-06-22-install-stratos-in-one-go.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-08-27-re-writing-query-parameters-in-wso2-esb.md" afterPath="$PROJECT_DIR$/content/2014-08-27-re-writing-query-parameters-in-wso2-esb.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-10-24-providing-high-availability-for-stratos-with-pacemaker-heartbeat.md" afterPath="$PROJECT_DIR$/content/2014-10-24-providing-high-availability-for-stratos-with-pacemaker-heartbeat.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-11-27-how-to-activatedeactivate-message-processors-in-wso2-esb-with-mbeans.md" afterPath="$PROJECT_DIR$/content/2014-11-27-how-to-activatedeactivate-message-processors-in-wso2-esb-with-mbeans.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-12-15-installing-a-reverse-proxy-server-on-ubuntu-with-apache2.md" afterPath="$PROJECT_DIR$/content/2014-12-15-installing-a-reverse-proxy-server-on-ubuntu-with-apache2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/2014-12-22-introduction-to-apache-stratos-mock-iaas.md" afterPath="$PROJECT_DIR$/content/2014-12-22-introduction-to-apache-stratos-mock-iaas.md" />
     </list>
     <ignored path="imesh.io.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -579,18 +566,21 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c055cdc1-90f8-4bdf-bfef-8635be33c91d" name="Default" comment="" />
       <created>1447822857555</created>
       <option name="number" value="Default" />
       <updated>1447822857555</updated>
-      <workItem from="1447822859584" duration="38000" />
+      <workItem from="1447822859584" duration="491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38000" />
+    <option name="totallyTimeSpent" value="491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="342" y="48" width="1081" height="761" extended-state="0" />
@@ -620,6 +610,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />

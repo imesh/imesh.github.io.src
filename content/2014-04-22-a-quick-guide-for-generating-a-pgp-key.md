@@ -14,8 +14,6 @@ tags:
 
 #### 1. Generate a Self Signed Key
 
-
-
 ```` $ gpg --gen-key ````
 
 ````

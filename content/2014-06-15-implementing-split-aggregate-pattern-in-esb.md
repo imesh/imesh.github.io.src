@@ -19,12 +19,6 @@ In this article I have designed a sample mediation flow in WSO2 ESB, by using t
 
 ### In Mediation Flow
 
-
-  
-
-
-
-
 [![ESB-Iterate-Aggregate-In-Flow](http://imesh.gunaratne.org/wp-content/uploads/2014/06/ESB-Iterate-Aggregate-In-Flow.png)](http://imesh.gunaratne.org/wp-content/uploads/2014/06/ESB-Iterate-Aggregate-In-Flow.png)
 
 
@@ -35,7 +29,7 @@ In this article I have designed a sample mediation flow in WSO2 ESB, by using t
 - As the next step the iterate mediator will split the message using the XPath expression given and send each sub message to the endpoint.
 - At this point iterate mediator set the total sub message count in the message context:
 
-[code lang="java"]
+````
 org.apache.synapse.mediators.eip.splitter.IterateMediator (Synapse 2.1.2-wso2v5):
    private MessageContext getIteratedMessage() {
       ...
@@ -53,12 +47,6 @@ org.apache.synapse.mediators.eip.splitter.IterateMediator (Synapse 2.1.2-wso2v5)
 
 ### Out Mediation Flow
 
-
-  
-
-
-
-
 [![ESB-Iterate-Aggregate-Out-Flow](http://imesh.gunaratne.org/wp-content/uploads/2014/06/ESB-Iterate-Aggregate-Out-Flow.png)](http://imesh.gunaratne.org/wp-content/uploads/2014/06/ESB-Iterate-Aggregate-Out-Flow.png)
 
 
@@ -68,7 +56,7 @@ org.apache.synapse.mediators.eip.splitter.IterateMediator (Synapse 2.1.2-wso2v5)
 - Important: In this approach we will generate a sub result block for all the sub messages sent to the endpoint, even if a timeout occurs in one sub message.
 - Then the Aggregate Mediator will wait until responses to all the sub messages are received:
 
-[code lang="java"]
+````
 org.apache.synapse.mediators.eip.aggregator.Aggregate (Synapse 2.1.2-wso2v5):
    public synchronised boolean isComplete() {
    ...
@@ -86,7 +74,7 @@ org.apache.synapse.mediators.eip.aggregator.Aggregate (Synapse 2.1.2-wso2v5):
 
 - To do this we should not define a timeout in complete condition in aggregate mediator, rather the following could be defined:
 
-[code lang="xml"]
+````
 <aggregate> 
     <completeCondition> 
         <messageCount/> 

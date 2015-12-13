@@ -12,13 +12,7 @@ categories:
 
 [BizCode Application Builder 1.2 (Beta)](http://www.bizcodeframework.net/cs/files/folders/application_builder/entry39.aspx) was just released. Spent around two days on developing the new functionality to map Collection Association/Aggregations in BizCode Application Builder. Earlier versions did not support this functionality. The way Aggregations are mapped in Visual Studio Class Designer is using Collection Associations. For an example if we have an aggregation between class OrderDetails and class Product, an instance of OrderDetails can hold a collection of Product instances. Therefore it should be mapped into three tables in the Storage Layer, ORDER_DETAILS table, PRODUCT table and ORDER_DETAILS_PRODUCT_COLLECTION table to hold the collection data. In Class Designer we can define it as a List<Product> type association. Then the Application Builder will identify it as a Collection Association.
 
-
-
-
-![](http://www.imeshonline.net/images/aggregation1.jpg)
-
-
-
+![](http://www.imesh.io/images/aggregation1.jpg)
 
 Application Builder allows the user to select classes from the list of classes found in the Class Diagram to generate source code. Therefore it will check selected classes associations for referencing classes. If there are associations found in selected classes, all the referencing classes will be automatically selected. This feature was added to let the user to define Primary Keys for the referencing classes. Otherwise the Application Builder will not be able to map the associations properly.
 
@@ -49,14 +43,14 @@ Ex:-
 
 
 
-[](http://www.imeshonline.net/images/ClassDiagram.jpg)
+[](http://www.imesh.io/images/ClassDiagram.jpg)
 
 
 
 
-![](http://www.imeshonline.net/images/1.2_class_diagram_small.jpg)
+![](http://www.imesh.io/images/1.2_class_diagram_small.jpg)
 
 
 
 
-[[Large Size Image](http://www.imeshonline.net/images/1.2_class_diagram.jpg)]
+[[Large Size Image](http://www.imesh.io/images/1.2_class_diagram.jpg)]

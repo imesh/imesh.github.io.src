@@ -10,12 +10,12 @@ categories:
 - Blog
 ---
 
-This is another step in [ImageGallery](http://code.google.com/p/imagegallery/). Yesterday I wrote this new feature to view images in a different form, more precisely it is called the [Mosaic](http://en.wikipedia.org/wiki/Mosaic) view. Now the ImageGallery supports to view images in two different forms, the Thumbnail View and Mosaic View. There will be hyperlinks placed on the page to switch between the two different views. Have a look at my [photography](http://rootfolder.info/photography/default.aspx?gallery=mosaic&page=1) page.
+This is another step in [ImageGallery](http://code.google.com/p/imagegallery/). Yesterday I wrote this new feature to view images in a different form, more precisely it is called the [Mosaic](http://en.wikipedia.org/wiki/Mosaic) view. Now the ImageGallery supports to view images in two different forms, the Thumbnail View and Mosaic View. There will be hyperlinks placed on the page to switch between the two different views. Have a look at my [photography](http://imesh.io/photography/default.aspx?gallery=mosaic&page=1) page.
 
 ### Thumbnail View
 
-[![](http://rootfolder.info/images/imagegallery/Thumbnail_250.JPG) ](http://rootfolder.info/images/imagegallery/Thumbnail.JPG)
+[![](http://imesh.io/images/imagegallery/Thumbnail_250.JPG) ](http://imesh.io/images/imagegallery/Thumbnail.JPG)
 
 ### Mosaic View
 
-[![](http://rootfolder.info/images/imagegallery/Mosaic_250.JPG)](http://rootfolder.info/images/imagegallery/Mosaic.JPG)
+[![](http://imesh.io/images/imagegallery/Mosaic_250.JPG)](http://imesh.io/images/imagegallery/Mosaic.JPG)

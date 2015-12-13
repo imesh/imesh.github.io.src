@@ -17,9 +17,7 @@ At the moment Mono XSP2 supports ASP.NET 1.0 and 2.0 versions. Mono-Develop ID
 Now with Mono XSP2 we have a complete software stack for running .NET Applications on Linux:
 
 1. .NET Console Applications can run on Mono without doing any modifications.
-
 2. .NET Windows Applications can be ported to GTK (Mono uses GTK for GUI implementation) and run on Mono.
-
 3. ASP.NET Applications (including Web Services) can be directly run on Mono XSP2 without any modifications.
 
 How to install Mono XSP2 on Ubuntu:
@@ -49,5 +47,4 @@ Open a web browser and go to http://localhost:8080. This should open asp.net2-de
 References:
 
 http://www.mono-project.com/ASP.NET
-
 http://www.howtogeek.com/howto/ubuntu/run-aspnet-applications-on-ubuntu-for-developers/

@@ -15,19 +15,14 @@ tags:
 Apache Stratos (incubating) is now ready with it’s initial release. A new Git branch has been created for this release with the name “3.0.0-incubating-x”. Please note that "x" refers to the RC version. Please refer the project wiki for detailed information about this release. To start with, first we need to get the binary distribution of Apache Stratos. We could either build it from source or download the officially released files from svn.
 
 
-
 #### How to Build From Source:
 
-
-
 You could follow the below steps to build the binary distribution from source:
+
 ````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
-
 git checkout 3.0.0-incubation-x
-
 cd incubator-stratos
-
 mvn clean install
 ````
 
@@ -35,21 +30,14 @@ This process will checkout the source files from 3.0.0-incubating-x branch and b
 
 ````
 incubator-stratos/products/stratos-cli/distribution/target/apache-stratos-cli-3.0.0-incubating-x.zip
-
 incubator-stratos/products/cloud-controller/modules/distribution/target/apache-stratos-cc-3.0.0-incubating-x.zip
-
 incubator-stratos/products/stratos-controller/modules/distribution/target/apache-stratos-sc-3.0.0-incubating-x.zip
-
 incubator-stratos/products/elb/modules/distribution/target/apache-stratos-elb-3.0.0-incubating-x.zip
-
 incubator-stratos/products/stratos-agent/distribution/target/apache-stratos-agent-3.0.0-incubating-x.zip
 ````
  
 
-
 #### Download Binary Distributions:
-
-
 
 Please find the official binary packages at the blow location. Select the latest RC version and download the files.
 
@@ -58,57 +46,46 @@ https://dist.apache.org/repos/dist/dev/incubator/stratos/
 ````
  
 
-
-
 #### Download Openstack Cartridge Images:
-
-
 
 Once the binary distribution is in place we need to prepare Stratos cartridge images according to the preferred Infrastructure as a Service (IaaS) platform. Here I have created Apache Tomcat, PHP and MySQL cartridge images for Openstack. You could download those image files from the following URLs:
 
 ````
 stratos-3.0.0-incubating-tomcat-cartridge.img.zip
-
 stratos-3.0.0-incubating-php-cartridge.img.zip
-
 stratos-3.0.0-incubating-mysql-cartridge.img.zip
 ````
  
 
-
 #### Upload Cartridge Images to Openstack:
-
-
 
 1. The glance client could be used for uploading the above image files to an Openstack instance. Execute the below command to install glance client:
 
+````
 sudo apt-get install python-novaclient python-glanceclient swift
+````
 
 2. Then download EC2 credentials from Openstack Dashboard and source the openrc.sh file:
-
+````
 source /openrc.sh
+````
 
 3. Once cartridge images are downloaded execute the below command to upload them via glance. Here the glance client will use the above EC2 credentials to connect to the Openstack instance.
 
+````
 glance image-create --name="stratos-3.0.0-incubating--tomcat-cartridge" --is-public=true --container-format=ami --disk-format=ami < stratos-3.0.0-incubating-tomcat-cartridge.img
-
 glance image-create --name="stratos-3.0.0-incubating-mysql-cartridge" --is-public=true --container-format=ami --disk-format=ami < stratos-3.0.0-incubating-mysql-cartridge.img
-
 glance image-create --name="stratos-3.0.0-incubating-php-cartridge" --is-public=true --container-format=ami --disk-format=ami < stratos-3.0.0-incubating-php-cartridge.img
-
+````
  
-
 
 #### Prepare Stratos Installer
 
-
-
 1. Now take a copy of the Stratos installer from it’s source repository’s tools folder:
+
 ````
 git clone https://git-wip-us.apache.org/repos/asf/incubator-stratos.git
-
 git checkout 3.0.0-incubation-x
-
 cd incubator-stratos/tools/stratos-installer
 ````
 
@@ -132,8 +109,10 @@ export mysql_connector_jar=$stratos_pack_path/"mysql-connector-java-5.1.25.jar" 
 
 3. Configure Openstack section with following parameter values. One important thing to note here is that openstack_provider_enabled property enables Openstack IaaS in Stratos. Therefore in this specific scenario you may need to set ec2_provider_enabled property to false.
 
-````
+
 # Openstack
+
+````
 export openstack_provider_enabled=true
 export openstack_identity="stratos:stratos" #Openstack project name:Openstack login user
 export openstack_credential="password" #Openstack login password
@@ -181,32 +160,31 @@ Gitblits
 
 #### Install Apache Stratos
 
-
-
 1. Once the above configuration is done, execute the below command to install Stratos at the given path (stratos_path):
+
 ````
 sudo ./setup.sh -p "elb sc cc agent"
 ````
 
 2. At the end of the installation it will prompt to start all the servers in the background, you could say no to this question and start the server manually so that you have more control over the initial Stratos environment. More importantly if any configuration errors has occurred, you should be able to rectify them more easily.
+
 ````
 sh $stratos_path/<module>/bin/stratos.sh 
 ````
 
 3. Now carefully watch the logs of Elastic Load Balancer (ELB), Stratos Controller (SC), Cloud Controller (CC) and Stratos Agent. Those logs could be found at the following location of each module. Each should have started successfully without any problems.
+
 ````
 $stratos_path/<module>/repository/logs/wso2carbon.log
 ````
  
 
-
-
 #### Verify Apache Stratos Installation
-
-
 
 1. Now login to Stratos Controller using admin/admin and create a tenant user at the below URL:
 
-````https://sc.stratos.apache.org:9445/carbon````
+````
+https://sc.stratos.apache.org:9445/carbon
+````
 
 2. Login again to Stratos Controller using the tenant user and subscribe to a cartridge. Here you might need to use a Git repository to point to an application to be deployed on Stratos PaaS. This process should spin up a new instance of relevant cartridge and update the status on cartridge subscription list. Once the cartridge is ready you could test the deployed application by using its URL.

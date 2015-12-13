@@ -9,6 +9,7 @@ wordpress_id: 335
 categories:
 - Blog
 ---
+_Note! Configurator is now deprecated, please use [Puppet Apply](https://docs.puppetlabs.com/puppet/latest/reference/services_apply.html) instead_
 
 Product configurations can be automated with orchestration management systems such as Puppet, Chef, Salt, Ansible, etc. Most of these orchestration systems provide their own templating engine for templating configuration files. The problem with this model is that for each orchestration system a separate set of templates need to be created for the same product. Switching between different orchestration systems & maintaining different sets of templates files are very costly.
 

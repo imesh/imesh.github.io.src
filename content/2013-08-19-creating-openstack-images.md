@@ -17,64 +17,45 @@ The official documentation for creating OpenStack images from an ISO can be foun
 To create a new VM image from a running VM instance we first need to install client tools.
 
 
-
 #### Install Client Tools for Nova, Glance & Swift:
 
+Execute the below command to install nova-client, glance-client and swift on an Ubuntu host. If its a different operating system please refer [OpenStack documentation](http://docs.openstack.org/user-guide/content/install_clients.html) for details:
 
-
-
-Execute the below command to install nova-client, glance-client and swift on an Ubuntu host. If its a different operating system please refer [OpenStack documentation](http://docs.openstack.org/user-guide/content/install_clients.html) for details.
-
-
-```` sudo apt-get install python-novaclient python-glanceclient swift ````
-
-
+````
+sudo apt-get install python-novaclient python-glanceclient swift
+````
 
 #### List Running Instances:
 
+Next execute the below command to list the running instances:
 
-
-
-Next execute the below command to list the running instances.
-
-
-```` nova list ````
-
-
+````
+nova list
+````
 
 #### Create an Image from a Running Instance:
 
+Select the instance that needs to be exported as an image and execute the below command:
 
-
-
-Select the instance that needs to be exported as an image and execute the below command.
-
-
-```` nova create-image <image-id> <new-image-name> ````
-
-
+````
+nova create-image <image-id> <new-image-name>
+````
 
 #### Download an Image to Disk:
 
+Execute the below command to download the created image as a file:
 
-
-
-Execute the below command to download the created image as a file.
-
-
-```` glance image-download <image-id> --file <file-name>.img ````
-
-
+````
+glance image-download <image-id> --file <file-name>.img
+````
 
 #### Create an Image from an Image File:
 
-
-
-
 Now if you want to upload an existing image file to an OpenStack instance execute the below command.
 
-
-```` glance image-create --name="image-name" --is-public=false --container-format=ami --disk-format=ami < file-name.img ````
+````
+glance image-create --name="image-name" --is-public=false --container-format=ami --disk-format=ami < file-name.img
+````
 
 **Notes:**
 OpenStack Grizzly release has following components: Object Store (Swift), Image Store (Glance), Compute (Nova), Dashboard (Horizon), Identity (Keystone), Network (Quantum) and Block Storage (Cinder).
