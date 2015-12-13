@@ -24,26 +24,12 @@ _Figure: Mock IaaS Component Architecture_
 
 Stratos provides an abstraction layer for implementing support for Infrastructure as a Service platforms. This is a generic interface that includes following features:
 
-
-
-	
   * Start an instance
-
-	
   * Send user-data/payload parameters to instances
-
-	
   * Attach network interfaces to instances
-
-	
   * Allocate public IP addresses to network interfaces
-
-	
   * Attach storage (volumes) to instances
-
-	
   * Terminate an instance
-
 
 In Stratos 4.0.0 release this interface did not include some of the methods for interacting with the IaaS rather those were directly invoked via the jclouds compute service API. With the introduction of the Mock IaaS all the methods required to communicate with the IaaS were moved to the IaaS interface and jclouds specific logic were moved to a separate class called JcloudsIaas. Now this IaaS interface is implemented by the Mock IaaS client and Jclouds IaaS client (JcloudsIaas). Jclouds IaaS client is further extended by EC2, OpenStack, VCloud, CloudStack, Docker providers.
 
