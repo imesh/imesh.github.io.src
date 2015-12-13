@@ -36,17 +36,17 @@ languageCode = "en-us"
   url = "/"
 
 [[menu.main]]
-  name = "WSO2"
-  weight = -110
-  identifier = "wso2"
-  url = "/tags/wso2"
-
-[[menu.main]]
   name = "Apache"
-  weight = -100
+  weight = -110
   identifier = "apache"
   url = "/tags/apache"
 
+[[menu.main]]
+  name = "WSO2"
+  weight = -100
+  identifier = "wso2"
+  url = "/tags/wso2"
+  
 [[menu.main]]
   name = "About Me"
   weight = -90
