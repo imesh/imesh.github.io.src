@@ -5,6 +5,8 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 builddrafts = false
+paginate = 5
+DisqusShortname = "imeshio"
 canonifyurls = true
 languageCode = "en-us"
 
@@ -13,6 +15,28 @@ languageCode = "en-us"
   tag = "tags"
 
 [params]
-  description = "Open Source | Middleware | Cloud | Life"
+  description = "Open Source | Middleware | PaaS | Life"
+  cover = "images/cover.jpg"
   author = "Imesh Gunaratne"
+  authorlocation = "Colombo, LK"
+  authorwebsite = "http://imesh.io"
+  # logo = "images/logo.png"
+  googleAnalyticsUserID = ""
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  # RSSLink = "http://feeds.feedburner.com/..." 
+  githubName = "imesh"
+  twitterName = "imesh"
+  # facebookName = ""
+  hideHUGOSupport = false
 
+[[menu.main]]
+  name = "Home"
+  weight = -120
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "About Me"
+  weight = -110
+  identifier = "about"
+  url = "/about"

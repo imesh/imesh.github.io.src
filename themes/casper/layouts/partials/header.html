@@ -31,10 +31,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="{{.Site.BaseURL}}images/favicon.ico">
-	  <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/apple-touch-icon.png" />
 
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/screen.css" />
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/nav.css" />
+    
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
 
@@ -68,9 +69,13 @@
     {{ if .Site.Params.customHeaderPartial }}
         {{ partial .Site.Params.customHeaderPartial . }}
     {{ end }}
+    
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/railscasts.min.css">
+    <script src="{{.Site.BaseURL}}js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="nav-closed">
-
+    
   {{ partial "navigation.html" . }}
 
  <div class="site-wrapper">

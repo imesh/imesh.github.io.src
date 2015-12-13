@@ -1,9 +1,10 @@
 +++
 date = "2015-11-18T06:13:48+05:30"
 title = "about"
+comments = false
 
 +++
-i## About imesh.io
+About the author
 
 Imesh is a Senior Technical Lead at WSO2 and the Product Lead of WSO2 Private PaaS. He is a committer and Project Management Committee (PMC) member of Apache Stratos project. Imesh has provided technical consultancy for many customers on designing and implementing Enterprise Integration, API Management, Identity Management and Platform as a Service (PaaS) solutions at WSO2.
  
