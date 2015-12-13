@@ -21,13 +21,17 @@ As a solution to this, I implemented a script to automate the complete Stratos i
 
 #### Prerequisites:
 
-```` An Ubuntu 12.04 64bit host ````
+- An Ubuntu 12.04 64bit host
+- Git client
 
 
 #### Steps to follow:
 
 1. Take a git clone of the below git repository:
-```` git clone https://github.com/imesh/stratos-dev-stack.git ````
+
+````
+git clone https://github.com/imesh/stratos-dev-stack.git
+````
 
 2. Update install.sh with host private IP and IaaS configuration parameters:
 
