@@ -9,6 +9,7 @@ wordpress_id: 83
 categories:
 - Blog
 tags:
+- apache
 - stratos
 ---
 

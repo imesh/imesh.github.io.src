@@ -9,8 +9,9 @@ wordpress_id: 82
 categories:
 - Blog
 tags:
-- load-balancing
+- apache
 - stratos
+- load-balancing
 ---
 
 In Apache Stratos (incubating) 4 architecture there are three different ways to configure load balancers for services. The idea of this functionality is to provide more optimized load balancing capabilities in a single PaaS deployment as required by different services.

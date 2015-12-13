@@ -8,6 +8,9 @@ title: How to Activate/Deactivate Message Processors in WSO2 ESB with MBeans
 wordpress_id: 301
 categories:
 - Blog
+tags:
+- wso2
+- esb
 ---
 
 ## What is a Message Processor?

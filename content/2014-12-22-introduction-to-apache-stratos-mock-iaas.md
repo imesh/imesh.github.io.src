@@ -8,6 +8,9 @@ title: Introduction to Apache Stratos Mock IaaS
 wordpress_id: 310
 categories:
 - Blog
+tags:
+- apache
+- stratos
 ---
 
 Apache Stratos supports many Infrastructure as a Service (IaaS) platforms; EC2, OpenStack, VCloud, CloudStack, Docker, etc. However setting up an IaaS or purchasing a public IaaS service is an overhead for contributors and people who would like to tryout Stratos; setting up a local IaaS needs considerable amount of hardware resources and purchasing an online IaaS account involves costs. These are some of the major barriers Stratos community had for last year or so for implementing automated integration tests, bringing in new contributors and allowing people to tryout Stratos with less effort.

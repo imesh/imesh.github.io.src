@@ -14,7 +14,9 @@ tags:
 
 #### 1. Generate a Self Signed Key
 
-```` $ gpg --gen-key ````
+````
+$ gpg --gen-key
+````
 
 ````
 gpg (GnuPG) 1.4.10; Copyright (C) 2008 Free Software Foundation, Inc.
@@ -62,12 +64,11 @@ You need a Passphrase to protect your secret key.
 ````
 
 
-
 #### 2. Check that SHA1 is Avoided
 
-
-
-```` $ gpg --edit-key KEY-ID ````
+````
+$ gpg --edit-key KEY-ID
+````
 
 ````
 gpg (GnuPG) 1.4.10; Copyright (C) 2008 Free Software Foundation, Inc.
@@ -82,7 +83,9 @@ sub  4096R/436E0F7C  created: 2010-02-16  expires: never       usage: E
 ultimate (1). First-Name Last-Name (CODE SIGNING KEY) <user-id@apache.org>
 ````
 
-```` Command> showpref ````
+````
+Command> showpref
+````
 
 ````
 ultimate (1). First-Name Last-Name (CODE SIGNING KEY)
@@ -95,38 +98,37 @@ ultimate (1). First-Name Last-Name (CODE SIGNING KEY)
 
 Here SHA1 should appear last in the Digest section. If not enter below command to correct the order:
 
-```` Command> setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed ````
-
+````
+Command> setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed 
+````
 
 
 #### 3. Export the Private Key
 
-
-
 Export and keep the private key in a secure location:
 
-```` $ gpg --export-secret-keys --armor --output private-key.sec ````
-
+````
+$ gpg --export-secret-keys --armor --output private-key.sec
+````
 
 
 #### 4. Export the Public Key
 
-
-
 Export the public key:
 
-```` $ gpg --export --armor --output public-key.asc ````
-
+```` 
+$ gpg --export --armor --output public-key.asc 
+````
 
 
 #### 5. Send the Public Key to a Server
 
-
-
 Send the public key to a preferred key server (pgp.mit.edu, pgpkeys.telering.at, pgp.surfnet.nl, etc):
 
-```` $ gpg --keyserver SERVER-HOST --send-keys KEY-ID ````
- 
+````
+$ gpg --keyserver SERVER-HOST --send-keys KEY-ID
+````
+
 
 **References:**
 

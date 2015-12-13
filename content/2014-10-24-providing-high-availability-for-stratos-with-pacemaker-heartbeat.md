@@ -8,6 +8,8 @@ title: Providing High Availability for Stratos with Pacemaker & Heartbeat
 wordpress_id: 292
 categories:
 - Blog
+tags:
+- ha
 ---
 
 This article describes how High Availability (HA) can be configured with [Pacemaker](http://clusterlabs.org/wiki/Pacemaker) & [Heartbeat](http://linux-ha.org/wiki/Heartbeat) for Apache Stratos. In general this concept can be applied for any server application which needs HA and does not require any data replication. If data replication is needed you may need to consider using [DRBD](http://www.drbd.org/home/what-is-drbd/) with Pacemaker. First of all we will see what Pacemaker and Heartbeat are and go through a series of steps on configuring those.

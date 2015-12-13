@@ -9,8 +9,9 @@ wordpress_id: 269
 categories:
 - Blog
 tags:
-- paas
+- apache
 - stratos
+- paas
 ---
 
 Apache Stratos 4.0.0 [installation process](https://cwiki.apache.org/confluence/display/STRATOS/4.0.0+Installation+Guide) has series of manual steps; installing prerequisites, downloading source and binary packages, installing and configuring puppet master, configuring Stratos products, etc. I think it is a waste of time to do all these steps over an over again when setting up Stratos development or demo environments.

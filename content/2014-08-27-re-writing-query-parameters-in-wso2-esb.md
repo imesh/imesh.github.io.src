@@ -9,7 +9,8 @@ wordpress_id: 280
 categories:
 - Blog
 tags:
-- wso2-esb
+- wso2
+- esb
 ---
 
 The following code sample shows how to re-write a query parameter in an URL in WSO2 ESB. This technique might be useful when dynamically handling endpoint URLs.

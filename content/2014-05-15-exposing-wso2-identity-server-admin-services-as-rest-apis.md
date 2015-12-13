@@ -9,6 +9,7 @@ wordpress_id: 80
 categories:
 - Blog
 tags:
+- wso2
 - identity
 - security
 ---

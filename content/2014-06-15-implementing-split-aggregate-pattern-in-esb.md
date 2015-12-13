@@ -9,6 +9,7 @@ wordpress_id: 69
 categories:
 - Blog
 tags:
+- wso2
 - esb
 ---
 
