@@ -30,7 +30,7 @@ This might be a great start of a long journey on making an industry standard Paa
 
 At it’s core Apache Stratos is built using OSGi’s [3] dynamic modular architecture. OSGi is one of the best or may be the only industry proven standard for implementing true component based Java applications until JSR 277 [4] was implemented. The core benifit of using a such standard is that, applications could extend their features without having to change the entire system [5]. The complete Stratos PaaS has been composed as a collection of OSGi modules. These modules have been grouped into four different categories as an extra step for improving the maintainability and readability of the platform. They are grouped as components, service stubs, features and products.
 
-![](http://imesh.io/a/1/images/apachestratos/osgi-componenet-architecture.png)
+![](http://imesh.io/images/apachestratos/osgi-componenet-architecture.png)
 
 The component modules are the lowest level implementation of the system functionality. Service stub modules include Axis2 web service client stubs for accessing services. The service implementation is done in each required component. Feature modules aggregate components and service stubs and exposes high level system features to the next level. A feature may also refer another feature. Finally a product module is made by aggregating a collection of selected features. In Apache Stratos currently there are five products; Cloud Controller (CC), Elastic Load Balancer (ELB), Stratos Controller (SC), Stratos Agent and Command Line Interface (CLI). This exceptional architectural design was inherited from OSGi modular architecture of WSO2 Carbon platform. Except for this model Carbon provides more extensive features like User Management, Security Management, Tenant Management, Clustering, SOA Governance, Centralized Logging, Web UI and many other supportive features for middleware related products [6].
 
@@ -57,7 +57,7 @@ Application deployment is one of the key tasks in a PaaS. Stratos has achieved t
 
 ## Logical Architecture
 
-![](http://imesh.io/a/1/images/ApacheStratos/apache-stratos-logical-architecture.png)
+![](http://imesh.io/images/ApacheStratos/apache-stratos-logical-architecture.png)
 
 
 ### Cloud Controller (CC)

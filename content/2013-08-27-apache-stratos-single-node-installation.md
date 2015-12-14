@@ -13,7 +13,7 @@ tags:
 - stratos
 ---
 
-![](http://imesh.io/a/1/images/ApacheStratos/stratos-single-node-architecture.png)
+![](http://imesh.io/images/ApacheStratos/stratos-single-node-architecture.png)
 
 [Based on Apache Stratos (incubating) 4.0.0-M5]
 
