@@ -1,7 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-
 {{if .Params.image}}
 <header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
   <nav class="main-nav overlay clearfix">
@@ -23,8 +22,6 @@
         {{end}}
       {{end}}
     </nav>
-
-
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{.Title}}</h1>
@@ -35,21 +32,11 @@
             </h2>
         </div>
     </div>
-
-
-
 </header>
 
-
-
 <main class="content" role="main">
-
-
-
-
   <article class="post {{ .Section }}">
     <header class="post-header">
-
         <section class="post-meta">
         {{ if eq .Section "post"}}
           <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
@@ -64,13 +51,9 @@
 
     <section class="post-content">
 
-
 {{ .Content }}
 
-
-
 <nav class="navpage">
-
 {{ $currentNode := . }}
 {{ range .Site.Menus.main }}
 {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}}
@@ -94,20 +77,14 @@
       </li>
       </ul>
       {{ end }}
-
-
 {{end}}
 {{end}}
 
 </nav>
-
-
     </section>
 
 
   <footer class="post-footer">
-
-
     {{if .Site.Params.logo}}
     <figure class="author-image">
         <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{ $baseurl }}{{.Site.Params.logo}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
@@ -115,13 +92,9 @@
     {{end}}
 
     {{ partial "author.html" . }}
-
     {{ partial "share.html" . }}
-
     {{ partial "disqus.html" . }}
-
   </footer>
 </article>
-
 </main>
 {{ partial "footer.html" . }}
