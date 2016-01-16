@@ -67,6 +67,11 @@ The libcontainer project was initially started by [Docker] [17] and now it has b
 ### 2016 - Windows Containers
 Microsoft also took an initiative to add container support to Microsoft Windows Server operating system in year 2015 for Windows based applications and it's called [Windows Containers] [24]. This is to be released with Microsoft Windows Server 2016. With this implementation Docker would be able to run Docker containers on Windows natively without having to run a virtual machine to run Docker (earlier Docker ran on Windows using a Linux VM).
 
+## The Future of Containers
+As of today (Jan 2016) there is a huge trend in the industry to move towards containers from viratual machines for deploying software applications. According to [Brian Grant] [25] Google has used container technology for many years with [Borg and Omega] [26] platforms for running Google products at scale. Google may have gained a huge gain in performance, resource utilization and overall efficiency using containers during past years. Very recently Microsoft who did not had means of running containers on Windows platform took immediate action to implement support for containers and Docker on Windows Server.
+
+Docker, Rocket and other container platforms have a common problem of being vulnerable to single point of failure. Even though a collection of containers can be run on a single host, if the host fail, all the containers run on that host will also fail. The only option to solve this problem is to use a container host cluster. Google took a step to implement an open source container cluster management system called Kubernetes with the experience they got from Borg. Docker also started a solution called Docker Swarm. Today these solutions are at the very early stages and it may take several months and years to complete their full feature set and widely used.
+
 [1]: https://en.wikipedia.org/wiki/Operating-system-level_virtualization#IMPLEMENTATIONS
 [2]: https://en.wikipedia.org/wiki/Chroot
 [3]: https://en.wikipedia.org/wiki/FreeBSD_jail
@@ -91,3 +96,5 @@ Microsoft also took an initiative to add container support to Microsoft Windows 
 [22]: https://coreos.com/etcd/
 [23]: https://github.com/coreos/flannel
 [24]: https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview
+[25] https://github.com/bgrant0607
+[26] http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf
