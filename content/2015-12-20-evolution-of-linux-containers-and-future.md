@@ -8,7 +8,7 @@ title: Evolution of Linux Containers and Future
 categories:
 - blog
 tags:
-- containers
+- containers, docker, linux
 ---
 
 # Evolution of Linux Containers & Future
