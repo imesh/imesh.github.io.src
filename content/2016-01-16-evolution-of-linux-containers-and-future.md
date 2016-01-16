@@ -23,7 +23,7 @@ Containers make use of the Linux kernel features such as Namespaces, Apparmor, S
 In general containers provide means of creating container images based on various Linux distributions, an API for managing the lifecycle of the containers, client tools for interacting with the API, features to take snapshots, migrating container instances from one container host to another, etc.
 
 ## Container History
-Below is a short summary of container history extracted from Wikipedia and listed according to [11]:
+Below is a short summary of container history extracted from Wikipedia and other sources:
 
 ### 1979 - chroot
 Container concept was started way back in 1979 with UNIX [chroot] [2]. It's an UNIX operating-system system call for changing the root directory of a process and its children to a new location in the filesystem which is only visible to a given process. The idea of this feature is to provide an isolated disk space for each process. Later in 1982 this was added to BSD.
