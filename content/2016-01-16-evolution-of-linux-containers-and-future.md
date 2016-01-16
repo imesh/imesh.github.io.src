@@ -63,6 +63,10 @@ The libcontainer project was initially started by [Docker] [17] and now it has b
 ### 2014 - Rocket
 [Rocket] [20] is a much similar initiative to Docker started by CoreOS for fixing some of the drawbacks they found in Docker. CoreOS has mentioned that their aim is to provide more rigorous security and production requirements than Docker. More importantly it is implemented on App Container specification to be a more open standard. In addition to Rocket, CoreOS also develops several other container related products used by Docker & Kubernetes; [CoreOS Operating System] [21], [etcd] [22], [flannel] [23].
 
+
+### 2015/2016 - Windows Containers
+Microsoft also took an initiative to add container support to Microsoft Windows Server operating system in year 2015 for Windows based applications and it's called [Windows Containers] [24]. This is to be released with Microsoft Windows Server 2016. With this implementation Docker would be able to run Docker containers on Windows natively without having to run a virtual machine to run Docker (earlier Docker ran on Windows using a Linux VM).
+
 [1]: https://en.wikipedia.org/wiki/Operating-system-level_virtualization#IMPLEMENTATIONS
 [2]: https://en.wikipedia.org/wiki/Chroot
 [3]: https://en.wikipedia.org/wiki/FreeBSD_jail
@@ -86,3 +90,4 @@ The libcontainer project was initially started by [Docker] [17] and now it has b
 [21]: https://en.wikipedia.org/wiki/CoreOS
 [22]: https://coreos.com/etcd/
 [23]: https://github.com/coreos/flannel
+[24]: https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview
