@@ -13,12 +13,12 @@ tags:
 
 # Evolution of Linux Containers & Future
 
-Linux containers is an [operating system level virtualization] [1] technology for providing multiple isolated Linux environments on a single Linux host. Unlike virtual machines (VMs) containers do not run a dedicated guest operating system rather they share the host operating system kernel and make use of  guest operating system system libraries for providing the required OS capabilities. Since there is no dedicated operating system, containers start much faster than VMs.
+Linux containers is an [operating system level virtualization] [1] technology for providing multiple isolated Linux environments on a single Linux host. Unlike virtual machines (VMs) containers do not run dedicated guest operating systems rather they share the host operating system kernel and make use of the guest operating system system libraries for providing the required OS capabilities. Since there is no dedicated operating system, containers start much faster than VMs.
 
 ![Virtual Machines Vs Containers](/images/contvsvm.png)
 > Image credit: Docker Inc.
 
-Containers make use of the Linux kernel features such as Namespaces, Apparmor, SELinux profiles, chroot & CGroups for providing an isolated environment similar to VMs. Linux security modules guarantee that access to the host machine and the kernel from the containers is properly managed to avoid any intrusion activities. In addition containers can run different Linux distributions from its host operating system  if both operating systems to run on the same CPU architecture.
+Containers make use of the Linux kernel features such as Namespaces, Apparmor, SELinux profiles, chroot & CGroups for providing an isolated environment similar to VMs. Linux security modules guarantee that access to the host machine and the kernel from the containers is properly managed to avoid any intrusion activities. In addition containers can run different Linux distributions from its host operating system if both operating systems can run on the same CPU architecture.
 
 In general containers provide means of creating container images based on various Linux distributions, an API for managing the lifecycle of the containers, client tools for interacting with the API, features to take snapshots, migrating container instances from one container host to another, etc.
 
@@ -68,9 +68,13 @@ The libcontainer project was initially started by [Docker] [17] and now it has b
 Microsoft also took an initiative to add container support to Microsoft Windows Server operating system in year 2015 for Windows based applications and it's called [Windows Containers] [24]. This is to be released with Microsoft Windows Server 2016. With this implementation Docker would be able to run Docker containers on Windows natively without having to run a virtual machine to run Docker (earlier Docker ran on Windows using a Linux VM).
 
 ## The Future of Containers
-As of today (Jan 2016) there is a huge trend in the industry to move towards containers from viratual machines for deploying software applications. According to [Brian Grant] [25] Google has used container technology for many years with [Borg and Omega] [26] platforms for running Google products at scale. Google may have gained a huge gain in performance, resource utilization and overall efficiency using containers during past years. Very recently Microsoft who did not had means of running containers on Windows platform took immediate action to implement support for containers and Docker on Windows Server.
+As of today (Jan 2016) there is a significant trend in the industry to move towards containers from VMs for deploying software applications. The main reasons for this are the flexibility and low cost that containers provide compared to VMs. Google has used container technology for many years with [Borg & Omega] [25] container cluster management platforms for running Google applications at scale. More importantly Google has contributed to container space by implementing cgroups and participating in libcontainer project. Google may have gained a huge gain in performance, resource utilization and overall efficiency using containers during past years. Very recently Microsoft who did not had an operating system level virtualization on Windows platform took immediate actions to implement native support for containers on Windows Server.
 
-Docker, Rocket and other container platforms have a common problem of being vulnerable to single point of failure. Even though a collection of containers can be run on a single host, if the host fail, all the containers run on that host will also fail. The only option to solve this problem is to use a container host cluster. Google took a step to implement an open source container cluster management system called Kubernetes with the experience they got from Borg. Docker also started a solution called Docker Swarm. Today these solutions are at the very early stages and it may take several months and years to complete their full feature set, become stable and widely use in the industry in production environments.
+Docker, Rocket and other container platforms cannot run on a single host in a production environment, the reason is that they are exposed to single point of failure. While a collection of containers are run on a single host, if the host fail, all the containers that run on that host will also fail. To avoid this a container host cluster need to be used. Google took a step to implement an open source container cluster management system called [Kubernetes] [26] with the experience they got from Borg. Docker also started a solution called [Docker Swarm] [27]. Today these solutions are at their very early stages and it may take several months and may be another year to complete their full feature set, become stable and widely use in the industry in production environments.
+
+[Microservices] [28] is another groundbreaking technology rather a software architecture which uses containers for their deployment. A microservice is nothing new but a lightweight implementation of a web service which can start extremely fast compared to a standard web service. This is done by packaging a unit of functionality (may be a single service/API method) in one service and embedding it into a lightweight web server binary.
+
+By considering above facts we can predict that on next few years containers may take over virtual machines, sometimes might replace completely. Last year I worked with handful of enterprises on implementing container based solutions on POC level. There were few who wanted to take the challenge and put them in production. This may change very quickly as the container cluster management systems get more mature.
 
 [1]: https://en.wikipedia.org/wiki/Operating-system-level_virtualization#IMPLEMENTATIONS
 [2]: https://en.wikipedia.org/wiki/Chroot
@@ -96,5 +100,7 @@ Docker, Rocket and other container platforms have a common problem of being vuln
 [22]: https://coreos.com/etcd/
 [23]: https://github.com/coreos/flannel
 [24]: https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview
-[25]: https://github.com/bgrant0607
-[26]: http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf
+[25]: http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf
+[26]: http://kubernetes.io/
+[27]: https://docs.docker.com/swarm/
+[28]: http://martinfowler.com/articles/microservices.html
