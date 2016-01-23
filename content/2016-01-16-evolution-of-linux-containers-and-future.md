@@ -96,5 +96,5 @@ Docker, Rocket and other container platforms have a common problem of being vuln
 [22]: https://coreos.com/etcd/
 [23]: https://github.com/coreos/flannel
 [24]: https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview
-[25] https://github.com/bgrant0607
-[26] http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf
+[25]: https://github.com/bgrant0607
+[26]: http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43438.pdf
